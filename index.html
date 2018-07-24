@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贷款超市</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/common.css">
+    <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body>
+	<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8mHttx4uZDZb3XRSevDk4YeAWNAeE0VU"></script>
+
+<div class="wrapper">
+    <!--轮播图-->
+    <div class="homePage">
+          <header class="XDBanner">
+              <ul class="XDBanner-img">
+              </ul>
+              <ul class="XDBanner-bar">
+              </ul>
+              <div class="XDinfo">
+                  <div class="XDinfo-wrapper">
+                      <div class="site-wrapper">
+                          <i></i><span class="location" id="currentCity"></span>
+                      </div>
+                      <div class="registerRecord"><p class="userApply">申请记录</p></div>
+                  </div>
+              </div>
+          </header>
+          <div class="XDtab">
+              <ul class="tab-list">
+                  <li><a href="complete.html"></a><span>全部贷款</span></li>
+              </ul>
+          </div>
+          <div class="XDbody">
+              <ul class="XDbodyList " id="homePageList">
+
+              </ul>
+          </div>
+      </div>
+    <!--地图-->
+    <div class="XDmap">
+            <header class=" header-wrapper ">
+                  <div class="header-selectCity header-package"><p>选择城市</p></div>
+                   <div class="cityLeave leave"><i class="titleIcon homeIcon"></i></div>
+            </header>
+            <div class="mapLocation">
+                <div class="newLocation">
+                   <span>当前位置:</span><a id="NewCity" class="NewCity" href="javascript:void (0)">杭州</a>
+                   <span class="setLocation"><a class="anewLoc" id="anewLoc" href="javascript:void(0)">重新定位</a></span>
+                </div>
+            </div>
+            <div class="hotCity-title">
+                    <div class="hotCity-text">热门城市</div>
+                    <div class="letter"></div>
+            </div>
+            <div class="hotCity">   <!--热门城市-->
+                <div class="hotCity-city">
+                    <ul>
+                        <li>杭州</li>
+                        <li>上海</li>
+                        <li>南京</li>
+                        <li>广州</li>
+                        <li>北京</li>
+                        <li>成都</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cityList">
+                <ul class="cityList-wrap">
+
+                </ul>
+            </div>
+            <div class="hintInitialWrap"><i class="hintInitial"></i></div>
+        </div>
+    <!--带带-->
+    <div class="loanWrap" >
+            <header class="HeWholesale header-wrapper">
+                <div class=" header-package"><p id="tabTitle"></p></div>
+                <div class="leave loanLeave"><i class="HeWholesaleIcon titleIcon"></i></div>
+                <div class="refresh loanRefresh"><i class="titleIcon refreshIcon"></i></div>
+            </header>
+            <div class="XDbody loanList mt45">
+                <ul class="XDbodyList typeBodyList">
+
+                </ul>
+            </div>
+        </div>
+    <!--申请记录-->
+    <div class="applyRecord" >
+        <header class="HeWholesale header-wrapper">
+            <div class=" header-package"><p>申请记录</p></div>
+            <div class="leave" id="leaveRecord"><i class="HeWholesaleIcon titleIcon"></i></div>
+            <div class="refresh applyRefresh"><i class="titleIcon refreshIcon"></i></div>
+        </header>
+        <div class="applyBody">
+            <ul class="applyListWrap">
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    function currentCity() {
+    	var city = remote_ip_info['city'];
+    	if (city != '' || city != null){
+    	document.querySelector('#currentCity').innerHTML = city;
+        document.querySelector('#NewCity').innerHTML = city;
+    	}else{
+        var geolocation = new BMap.Geolocation();
+        var gc = new BMap.Geocoder();
+
+        geolocation.getCurrentPosition( function(r) {   //定位结果对象会传递给r变量
+                if(this.getStatus() == BMAP_STATUS_SUCCESS)
+                {  //通过Geolocation类的getStatus()可以判断是否成功定位。
+                    var pt = r.point;
+                    gc.getLocation(pt, function(rs){
+                        var addComp = rs.addressComponents;
+                        document.querySelector('#currentCity').innerHTML = addComp.city;
+                        document.querySelector('#NewCity').innerHTML = addComp.city;
+//                        $('#currentCity').text(addComp.city);
+                        // alert(addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber);
+                    });
+                }
+                else
+                {
+
+                    switch( this.getStatus() )
+                    {
+                        case 2:
+                            alert( '位置结果未知 获取位置失败.' );
+                            break;
+                        case 3:
+                            alert( '导航结果未知 获取位置失败..' );
+                            break;
+                        case 4:
+                            alert( '非法密钥 获取位置失败.' );
+                            break;
+                        case 5:
+                            alert( '对不起,非法请求位置  获取位置失败.' );
+                            break;
+                        case 6:
+                            alert( '对不起,当前 没有权限 获取位置失败.' );
+                            break;
+                        case 7:
+                            alert( '对不起,服务不可用 获取位置失败.' );
+                            break;
+                        case 8:
+                            alert( '对不起,请求超时 获取位置失败.' );
+                            break;
+
+                    }
+                }
+
+            },
+            {enableHighAccuracy: true}
+        )
+
+    }}
+    currentCity();
+    document.querySelector('#anewLoc').onclick =function(){
+    	currentCity();
+    }
+</script>
+<script src="src/lib/zepto.min.js"></script>
+<script src="src/lib/animate.js"></script>
+<script src="src/js/index.js"></script>
+</body>
+</html>

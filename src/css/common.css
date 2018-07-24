@@ -1,0 +1,449 @@
+
+
+.wrapper{
+    min-width: 300px;
+    max-width: 640px;
+    position: relative;
+    margin: 0 auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/*公司展示列表*/
+.XDbody{
+    position: relative;
+    padding: 15px ;
+    background-color: #F5F5F5;
+}
+.XDbodyList{
+    width:100%;
+}
+.XDbodyList li a{
+    display: flex;
+    display: -webkit-flex;
+    height: 44px;
+    padding: 15px 15px 18px 11px;
+    background: #FFFFFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.XDbodyList-left{
+	display: flex;
+	display: -webkit-flex;
+    font-size: 0;
+    flex:  1;
+    -webkit-flex: 1;
+}
+.XDbodyList-right{
+    /*-webkit-flex: 0 0 182px;
+    flex: 0 0 182px;*/
+   /*flex: auto;
+   -webkit-filter: auto;*/
+    display: flex;
+    display: -webkit-flex;
+    border-left: 1px solid rgb(238,238,238);
+}
+.left-img{
+    width: 34px;
+    height: 34px;
+    -webkit-align-self: center;
+    align-self: center;
+}
+.left-font{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+    margin-left: 11px;
+}
+.left-img i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.left-font-title{
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: rgb(51,51,51);
+}
+.left-font-hint{
+    margin-top: 8px;
+
+}
+.publicFC{
+    font-size: 11px;
+    color: rgb(153,153,153);
+    margin-top: 8px;
+}
+.inBlock{
+   /* display: inline-block;*/
+}
+.ml25{
+    margin-left: 25px;
+}
+.mt45{
+margin-top: 45px;
+}
+.numType{
+    padding-right: 5px;
+    font-size: 24px;
+    color:rgb(251,110,130);
+    font-family: arial MT;
+}
+.myriadType{
+    font-size: 10px;
+    color:rgb(251,110,130);
+}
+.rateType{
+    font-size: 13px;
+    color:rgb(251,110,130);
+    font-family: arial MT;
+}
+.right-font{
+	flex:1;
+	-webkit-flex: 1;
+	display: flex;
+	display: -webkit-flex;
+}
+.right-font div:first-child{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.right-font div:last-child{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.rateWrap p:first-child{
+	height: 24px;
+	line-height: 24px;
+} 
+.limitMoney{
+	height: 24px;
+	line-height: 24px;
+}
+.right-img{
+	flex: 0 0 12px;
+	margin-left: 8px;
+    vertical-align: top;
+    margin-top: 16px;
+}
+
+.right-img i{
+    display: block;
+    width:12px;
+    height: 12px;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.pl11{
+    padding-left: 22px;
+}
+.mb{
+    margin-bottom: 15px;
+}
+.pr15{
+    padding-right: 15px;
+}
+.pr23{
+    padding-right: 23px;
+}
+.XDbodyList>li:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+
+
+
+/*选择城市头部*/
+.header-wrapper{
+    position: fixed;
+    min-width: 300px;
+    max-width: 640px;
+    width:100%;
+    z-index: 999;
+}
+.header-package{
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 17px;
+    color: rgb(255,255,255);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.leave{
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    padding: 15.5px;
+}
+.titleIcon{
+    display: block;
+    width: 100%;
+    height:100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.refresh{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    padding: 15.5px;
+}
+
+
+.colorRed{
+ color:rgb(251,110,130);	
+}
+.colorBlue{
+	color: rgb(36,156,237);
+}
+.rateHig{
+   text-align: center;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 568px){
+    /*!*iPhone < 5 Portrait*!*/
+    .initial{
+        padding: 3px 5px;
+    }
+    /*.cityList{*/
+        /*padding-bottom: 400px;*/
+    /*}*/
+    .XDbody{
+        padding: 10px;
+    }
+    .XDbodyList li a{
+        padding: 15px 8px 18px 8px;
+    }
+    /*.XDbodyList-right{
+     flex: 0 0 150px;
+     -webkit-flex: 0 0 150px;
+    flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    }*/
+    .pl11{
+        padding-left: 5px;
+    }
+    .ml25{
+        margin-left: 5px;
+    }
+    .left-font{
+        margin-left: 8px;
+    }
+    .applyListWrap li{
+        padding: 19px 15px 14px 15px;
+    }
+    .numType{
+        font-size: 16px;
+        padding-right: 1px;
+    }
+    .rateHig{
+        width: 70px;
+    }
+}
+@media (min-device-width : 360px) and (-webkit-min-device-pixel-ratio : 2){
+    /*!*360*!*/
+    .initial{
+        padding: 3.5px 5px;
+    }
+    .XDbody{
+        padding: 15px;
+    }
+    .pl11 {
+        padding-left: 15px;
+    }
+    .ml25 {
+        margin-left: 15px;
+    }
+    .applyListWrap li{
+        padding: 19px 20px 14px 19px;
+    }
+    .numType{
+        font-size: 24px;
+        padding-right: 5px;
+    }
+    .rateHig{
+        width: 100px;
+    }
+}
+@media (min-device-width : 375px) and (max-device-width : 414px) and (-webkit-min-device-pixel-ratio : 2){
+    /*!*iPhone 6*!*/
+    .XDbody{
+        padding: 15px;
+    }
+    /*.XDbodyList-right{
+        flex: 0 0 190px;
+        -webkit-flex: 0  0 190px;
+       flex: 0 1 auto;
+       -webkit-flex:0 1 auto;
+    }*/
+    .pl11 {
+        padding-left: 16px;
+    }
+    .ml25 {
+        margin-left: 18px;
+    }
+    .applyListWrap li{
+        padding: 19px 20px 14px 19px;
+    }
+    .numType{
+        font-size: 24px;
+    }
+    .rateHig{
+        width: 110px;
+    }
+}
+
+@media (min-device-width : 400px) and (max-device-width : 732px) {
+    /*iphone 6+plus*/
+    .initial{
+        padding: 4px 5px;
+    }
+    .pl11 {
+        padding-left: 25px;
+    }
+    .ml25 {
+        margin-left: 25px;
+    }
+    .right-img {
+    margin-left: 15px;
+     }
+    .rateHig{
+        width: 120px;
+    }
+    
+}
+@media screen and (min-width: 737px){
+    /*!*大屏*!*/
+    .initial{
+        padding: 5px 4px;
+    }
+ .pl11 {
+        padding-left: 30px;
+    }
+    .ml25 {
+        margin-left: 30px;
+    }
+    .right-img {
+    margin-left: 30px;
+     }
+    .rateHig{
+        width: 150px;
+    }
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio:2) {
+    .tab-list>li:nth-child(1) a{
+        background-image: url("../img/home/ic-sjd@2x.png");
+    }
+    .tab-list>li:nth-child(2) a{
+        background-image: url("../img/home/ic-ded@2x.png");
+    }
+    .tab-list>li:nth-child(3) a{
+        background-image: url("../img/home/ic-xykd@2x.png");
+    }
+    .tab-list>li:nth-child(4) a{
+        background-image: url("../img/home/ic-gjjd@2x.png");
+    }
+    .tab-list>li:nth-child(5) a{
+        background-image: url("../img/home/ic-sbd@2x.png");
+    }
+    .tab-list>li:nth-child(6) a{
+        background-image: url("../img/home/ic-zmfd@2x.png");
+    }
+    .tab-list>li:nth-child(7) a{
+        background-image: url("../img/home/ic-jsd@2x.png");
+    }
+    .tab-list>li:nth-child(8) a{
+        background-image: url("../img/home/ic-qbdk@2x.png");
+    }
+    .left-img i{
+        background-image: url("../img/home/ic-qbdk@2x.png");
+    }
+    .right-img i{
+        background-image: url("../img/ic-next@2x.png");
+    }
+    .refreshIcon{
+        background-image: url("../img/tabImg/ic-refresh@2x.png");
+    }
+    /*城市头部*/
+    .header-selectCity{
+        background-image: url("../img/home/bg-top@2x.png");
+    }
+    .homeIcon {
+        background-image: url("../img/home/ic-close-white@2x.png");
+    }
+    /*全部贷款*/
+    .loanNoData i{
+        background-image: url("../img/pic-none-gray@2x.png");
+    }
+
+}
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3){
+    /*首页tab*/
+    .tab-list>li:nth-child(1) a{
+        background-image: url("../img/home/ic-sjd@3x.png");
+    }
+    .tab-list>li:nth-child(2) a{
+        background-image: url("../img/home/ic-ded@3x.png");
+    }
+    .tab-list>li:nth-child(3) a{
+        background-image: url("../img/home/ic-xykd@3x.png");
+    }
+    .tab-list>li:nth-child(4) a{
+        background-image: url("../img/home/ic-gjjd@3x.png");
+    }
+    .tab-list>li:nth-child(5) a{
+        background-image: url("../img/home/ic-sbd@3x.png");
+    }
+    .tab-list>li:nth-child(6) a{
+        background-image: url("../img/home/ic-zmfd@3x.png");
+    }
+    .tab-list>li:nth-child(7) a{
+        background-image: url("../img/home/ic-jsd@3x.png");
+    }
+    .tab-list>li:nth-child(8) a{
+        background-image: url("../img/home/ic-qbdk@3x.png");
+    }
+    .left-img i{
+        background-image: url("../img/home/ic-qbdk@3x.png");
+    }
+    .right-img i{
+        background-image: url("../img/ic-next@3x.png");
+    }
+    .refreshIcon{
+        background-image: url("../img/tabImg/ic-refresh@3x.png");
+    }
+    /*城市头部*/
+    .header-selectCity{
+        background-image: url("../img/home/bg-top@3x.png");
+    }
+    .homeIcon{
+        background-image: url("../img/home/ic-close-white@3x.png");
+    }
+    /*全部贷款*/
+    .loanNoData i{
+        background-image: url("../img/pic-none-gray@3x.png");
+    }
+}
+
+
+
+

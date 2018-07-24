@@ -1,0 +1,384 @@
+/*header*/
+.XDBanner{
+    position: relative;
+    width:100%;
+    height: 160px;
+    overflow: hidden;
+}
+.XDBanner-img{
+    height: 160px;
+}
+.XDBanner-img li{
+    float: left;
+}
+.XDBanner img{
+    width: 100%;
+    height: 160px;
+    vertical-align: text-top;
+}
+.XDBanner-bar{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+}
+.XDBanner-bar li{
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    background: #dddddd;
+    margin-right: 6px;
+}
+.XDBanner-bar li:nth-last-child(1){
+margin-right: 0;
+}
+.XDBanner-bar li:nth-child(1){
+    background: #ffffff;
+}
+/*tab*/
+.XDtab{
+    padding:13px 23px;
+}
+.XDtab li{
+    position: static;
+}
+.XDtab>ul{
+    display: -webkit-flex;
+    display: flex;
+    width:100%;
+    height: 172px;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+.XDtab>ul>li{
+    width: 25%;
+    height: 50%;
+    text-align: center;
+}
+.XDtab li>a{
+    display: block;
+    margin: 0 auto;
+    width: 46px;
+    height: 46px;
+}
+.XDtab li>span{
+    width:100%;
+    height: auto;
+    margin: 0;
+    border:none;
+    font-size: 12px;
+    color: rgb(51,51,51);
+}
+.XDtab>.tab-list>li>a{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/*轮播图上*/
+.XDinfo{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+}
+.XDinfo-wrapper{
+    display: flex;
+    display: -webkit-flex;
+    padding:  10px 18px;
+    color: #F0F5FF;
+}
+.site-wrapper{
+    flex: 0 0 100px;
+    -webkit-flex: 0 0 100px;
+    font-size: 0;
+}
+.site-wrapper i{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/home/ic-addr@2x.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+.location{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 6px;
+}
+.registerRecord{
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: end;
+    line-height: 25px;
+
+}
+
+/*中国城市*/
+/*城市头部*/
+
+
+.leave{
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    padding: 15.5px;
+}
+.XDmap,.loanWrap,.applyRecord, .homePage{
+    display: none;
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    width:100%;
+    height: 100%;
+    /*overflow: auto;*/
+    background: rgba(7,17,27,0.8);
+    background: #ffffff;
+    overflow-x: hidden;
+}
+.homePage{
+    display: block;
+}
+.loanWra{
+    display: none;
+}
+/*当前位置*/
+.mapLocation{
+    display: block;
+    height: 110px;
+    line-height: 110px;
+    padding: 0 23px;
+    color: rgb(102,102,102);
+    font-size: 15px;
+    margin-top: 45px;
+}
+.NewCity{
+    padding-left: 10px;
+}
+.anewLoc{
+	padding:8px 0;
+	}
+.setLocation{
+    float: right;
+    text-align: end;
+    color: rgb(36,165,237);
+}
+.hotCity-title{
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+    height: 23px;
+    line-height: 23px;
+}
+.hotCity-text{
+    flex: 1;
+    -webkit-flex: 1;
+    background: #F7F7F7;
+    padding-left: 23px;
+    font-size: 12px;
+    color: rgb(102,102,102);
+}
+.letter{
+    flex: 0 0 23px;
+    -webkit-flex: 0 0 23px;
+}
+.hotCity-city{
+    padding: 0 36px;
+    height: 120px;
+}
+.hotCity-city>ul{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    width:100%;
+    height: 100%;
+    margin: 0;
+}
+.hotCity-city li{
+    width:25%;
+    height: 50%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(0,0,0);
+}
+/*城市city*/
+.chinaTown{
+    position: relative;
+    width:100%;
+}
+.chinaText{
+    font-size: 12px;
+    color: rgb(102,102,102);
+}
+.chinaLetter{
+    position: fixed;
+    z-index: 99999;
+    top:45px;
+    right: 0;
+    height:100%;
+}
+.townList{
+    height: 44px;
+    padding: 0 23px 0 36px;
+    line-height: 44px;
+}
+
+.chinaInitial{
+    height: 23px;
+    line-height: 23px;
+    background: #F7F7F7;
+    padding-left: 23px;
+    font-size: 12px;
+    color: rgb(102,102,102);
+}
+.initial{
+    width:15px;
+    height: 15px;
+    text-align: center;
+}
+.initial a{
+    color: #007AFF;
+}
+.hintInitialWrap{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    left: 50%;
+    top:50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    text-align: center;
+}
+.hintInitial {
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-style: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.HeWholesale{
+    background-image: url("../img/bg-top@2x.png");
+}
+.HeWholesaleIcon{
+    background-image:url("../img/tabImg/ic-page-back-white@2x.png");
+}
+
+
+
+
+
+
+
+
+
+
+.applyBody{
+    position: relative;
+    padding: 15px ;
+    background-color: #F5F5F5;
+    margin-top: 45px;
+}
+.userApply{
+    float: right;
+}
+.applyListWrap{
+    width:100%;
+}
+
+.applyListWrap li{
+    background: #FFFFFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.applyListWrap li:last-child{
+    margin-bottom: 0;
+}
+.applyList{
+    display: flex;
+    display: -webkit-flex;
+    border-bottom: 1px solid rgb(238,238,238);
+    padding-bottom: 14px;
+
+}
+.applyList-left{
+    display: flex;
+    display: -webkit-flex;
+    font-size: 0;
+    flex: 1;
+}
+.applyList-right{
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: end;
+}
+
+.applyLeft-font{
+    display: inline-block;
+    margin-left: 19px;
+}
+.applyBtn{
+    width:100%;
+    height: 44px;
+    margin-top: 95px;
+    outline:none;
+    background-color: #ffffff;
+    -webkit-border-radius: 44px;
+    -moz-border-radius: 44px;
+    border-radius: 44px;
+    border: 1px solid rgb(36,165,237);
+    font-size: 15px;
+    color: rgb(36,165,237);
+
+}
+
+
+
+.mt10{
+    margin-top: 10px;
+}
+
+.applynumType{
+    padding-right: 5px;
+    color:rgb(251,110,130);
+    font-family: arial MT;
+}
+
+.applyHint{
+    text-align: center;
+    line-height: 36px;
+    color: rgb(153,153,153);
+    font-size: 12px;
+}
+
+
+.loanNoData{
+    text-align: center;
+}
+.loanNoData i{
+    display: block;
+    width: 70px;
+    height: 90px;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 50px  auto 31px;
+}
+.loanNoData p{
+    font-size: 14px;
+    color: rgb(153,153,153);
+}
